@@ -1,6 +1,3 @@
-// GIVEN I am using a daily planner to create a schedule
-// WHEN I open the planner
-// THEN the current day is displayed at the top of the calendar
 // WHEN I scroll down
 // THEN I am presented with time blocks for standard business hours
 // WHEN I view the time blocks for that day
@@ -12,9 +9,12 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 
+// displays current date/time
+moment(Date);
+$("#currentDay").text(moment().format('dddd, MMMM Do YYYY'));
 
-// display current day--  #currentDay
 
 // create time blocks, which will allow user to enter tasks--  .time-block, .row, .hour, .past, .present, .future
+
 
 // event listener for local storage --  .saveBtn
