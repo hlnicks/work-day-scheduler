@@ -1,4 +1,5 @@
 # Work Day Scheduler
+Work Day Schedule is a simple, easy to use calendar application, which allows the user to create tasks for each hour of the day.
 
 ## Built With:
 - HTML
@@ -6,7 +7,7 @@
 - JavaScript
 
 ## Links
-- [Github Repository]()
+- [Github Repository](https://github.com/hlnicks/work-day-scheduler)
 - [GitHub Page]()
 
 ## Screenshots
