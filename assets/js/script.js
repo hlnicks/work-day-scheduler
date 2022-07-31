@@ -1,18 +1,12 @@
-// WHEN I click the save button for that time block
-// THEN the text for that event is saved in local storage
-// WHEN I refresh the page
-// THEN the saved events persist
-
 // displays current date
 moment(Date);
-$("#currentDay").text(moment().format('dddd, MMMM Do YYYY'));
+$("#currentDay").text(moment().format('dddd, MMMM Do YYYY, h:mm a'));
 
 var currentTime = moment();
 currentTime = currentTime.startOf("hour");
 var pastTime = moment().startOf('day').add(8, "hours");
 
 function colorBlocks(){
-
     // 8am
     time1 = moment().startOf('day').add(8, "hours");
     currentTime = currentTime.startOf("hour");
@@ -25,7 +19,6 @@ function colorBlocks(){
     else if (currentTime.isSame(time1)) {
         $(".form1").addClass("present");
     };
-
 
     // 9am
     time2 = moment().startOf('day').add(9, "hours");
@@ -40,7 +33,6 @@ function colorBlocks(){
         $(".form2").addClass("future");
     };
 
-
     // 10am
     time3 = moment().startOf('day').add(10, "hours");
     currentTime = currentTime.startOf("hour");
@@ -53,7 +45,6 @@ function colorBlocks(){
     else if (currentTime.isBefore(time3)) {
         $(".form3").addClass("future");
     };
-
 
     // 11am
     time4 = moment().startOf('day').add(11, "hours");
@@ -81,7 +72,6 @@ function colorBlocks(){
         $(".form5").addClass("future");
     };
 
-
     // 1pm
     time6 = moment().startOf('day').add(13, "hours");
     currentTime = currentTime.startOf("hour");
@@ -95,33 +85,31 @@ function colorBlocks(){
         $(".form6").addClass("future");
     };
 
-
     // 2pm
     time7 = moment().startOf('day').add(14, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time7)) {
-        $("form7").addClass("past");
+        $(".form7").addClass("past");
     }
     else if (currentTime.isSame(time7)) {
         $(".form7").addClass("present");
     }
     else if (currentTime.isBefore(time7)) {
-        $("form7").addClass("future");
+        $(".form7").addClass("future");
     };
 
     // 3pm
     time8 = moment().startOf('day').add(15, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time8)) {
-        $("form8").addClass("past");
+        $(".form8").addClass("past");
     }
     else if (currentTime.isSame(time8)) {
-        $("form8").addClass("present");
+        $(".form8").addClass("present");
     }
     else if (currentTime.isBefore(time8)) {
-        $("form8").addClass("future");
+        $(".form8").addClass("future");
     };
-
 
     // 4pm
     time9 = moment().startOf('day').add(16, "hours");
@@ -138,7 +126,6 @@ function colorBlocks(){
 
     // 5pm
     time10 = moment().startOf('day').add(17, "hours");
-
     if (currentTime.isAfter(time10)) {
         $(".form10").addClass("past");
     }
@@ -150,8 +137,8 @@ function colorBlocks(){
     };
 };
 
-
 colorBlocks();
+
 
 var x = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5];
 for (var i = 0; i < x.length; i++) {
@@ -161,12 +148,9 @@ for (var i = 0; i < x.length; i++) {
 
 // saves to local storage
 $(".saveBtn").click(function () {
-    event.preventDefault();
+    preventDefault();
     var formValue = $(this).siblings(".form-control").val();
-    console.log("This worked");
     var listItem = $(this).parent().data("hour");
 
     localStorage.setItem(listItem, formValue);
 });
-// retrieves from local storage
-// function {};

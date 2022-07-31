@@ -10,7 +10,8 @@ Work Day Schedule is a simple, easy to use calendar application, which allows th
 - [Github Repository](https://github.com/hlnicks/work-day-scheduler)
 - [GitHub Page]()
 
-## Screenshots
+## Screenshot
+![Screenshot] (./assets/images/screenshot.png)
 
 ## Credits
 - [Original Repo](https://github.com/coding-boot-camp/super-disco)
