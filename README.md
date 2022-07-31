@@ -8,7 +8,7 @@ Work Day Schedule is a simple, easy to use calendar application, which allows th
 
 ## Links
 - [Github Repository](https://github.com/hlnicks/work-day-scheduler)
-- [GitHub Page]()
+- [GitHub Page](https://hlnicks.github.io/work-day-scheduler/)
 
 ## Screenshot
 ![Screenshot](./assets/images/screenshot.png)
